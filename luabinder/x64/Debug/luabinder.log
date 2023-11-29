@@ -1,0 +1,13 @@
+﻿  interface.cpp
+  luaexception.cpp
+  luainterface.cpp
+E:\Projects\luabinder\src\luainterface.cpp(290,33): warning C4101: 'e': unreferenced local variable
+E:\Projects\luabinder\src\luainterface.cpp(510,33): warning C4101: 'e': unreferenced local variable
+  luaobject.cpp
+  luavaluecasts.cpp
+  resourcemanager.cpp
+  demangle.cpp
+  string.cpp
+  time.cpp
+  Generating Code...
+  luabinder.vcxproj -> E:\Projects\luabinder\x64\Debug\luabinder.exe

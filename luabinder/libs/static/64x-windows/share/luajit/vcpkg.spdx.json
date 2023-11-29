@@ -1,0 +1,198 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/luajit-x64-windows-static-2023-01-04-f44bfd93-653c-4872-89cb-b6c782d8ec15",
+  "name": "luajit:x64-windows-static@2023-01-04 69fd678721ceda5ad32cacd5b0276cb06057dcbc3ed6db065055335121935499",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-ac02a9f660977426b8ec6392919fbb1d51b10998"
+    ],
+    "created": "2023-11-19T03:03:01Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-2",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-3",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-4",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-5",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "luajit",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "2023-01-04",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@3c7f639efd41b49e93c61ae54fd99bb332d80bf9",
+      "homepage": "https://github.com/LuaJIT/LuaJIT",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "LuaJIT is a Just-In-Time (JIT) compiler for the Lua programming language.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "luajit:x64-windows-static",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "69fd678721ceda5ad32cacd5b0276cb06057dcbc3ed6db065055335121935499",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "LuaJIT/LuaJIT",
+      "downloadLocation": "git+https://github.com/LuaJIT/LuaJIT@d0e88930ddde28ff662503f9f20facf34f7265aa",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "e4111b2d7eeb05676c62d69da13a380a51d98f082c0be575a414c09ee27ff17d101b5b4a95e1b8a1bad14d55a4d2b305718a11878fbf36e0d3d48e62ba03407f"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./C:/Users/codin/libraries/vcpkg/buildtrees/versioning_/versions/luajit/3c7f639efd41b49e93c61ae54fd99bb332d80bf9/003-do-not-set-macosx-deployment-target.patch",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e4d15a852342820c95a6d6e383830f676a9f5b879afed7b735e14aa130c19422"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/codin/libraries/vcpkg/buildtrees/versioning_/versions/luajit/3c7f639efd41b49e93c61ae54fd99bb332d80bf9/004-fix-build-path-and-crt-linkage.patch",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "fa2c056df2aac1563f69326b6c3274ae924ed8334255b04a8f570c85a85499ba"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/codin/libraries/vcpkg/buildtrees/versioning_/versions/luajit/3c7f639efd41b49e93c61ae54fd99bb332d80bf9/005-do-not-pass-ld-e-macosx.patch",
+      "SPDXID": "SPDXRef-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "61d6138cc96bc22ef97ffc306caaf7104a8303d6f6d6a68934c6af75464b72be"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/codin/libraries/vcpkg/buildtrees/versioning_/versions/luajit/3c7f639efd41b49e93c61ae54fd99bb332d80bf9/luajit.pc.win.in",
+      "SPDXID": "SPDXRef-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3292fb4e7c60ef5b32c09a97b4a4ab725d146b4ea827668178cd81f52321a567"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/codin/libraries/vcpkg/buildtrees/versioning_/versions/luajit/3c7f639efd41b49e93c61ae54fd99bb332d80bf9/portfile.cmake",
+      "SPDXID": "SPDXRef-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "a1836e27c17eef3df3b46f4553b050e22b8f34bb537439ba85303c35dd381d84"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/codin/libraries/vcpkg/buildtrees/versioning_/versions/luajit/3c7f639efd41b49e93c61ae54fd99bb332d80bf9/vcpkg.json",
+      "SPDXID": "SPDXRef-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1492fdb6ca7c825f533e5e3888a1882bc9cf2c33758123f0e8c56b2931eddcb8"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

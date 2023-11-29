@@ -1,0 +1,109 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/parallel-hashmap-x64-windows-static-1.3.8-ae3e4fec-0d45-49b9-92a0-3667ea58ed53",
+  "name": "parallel-hashmap:x64-windows-static@1.3.8 ad79fee262d211cd377b1a3c1f66410446c80a7b512fc533e6bf8568211017c6",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-ac02a9f660977426b8ec6392919fbb1d51b10998"
+    ],
+    "created": "2023-11-19T03:10:05Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "parallel-hashmap",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "1.3.8",
+      "downloadLocation": "git+https://github.com/Microsoft/vcpkg@65be62557bbdb29d6d0ee383b70a6f84ef401b2f",
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "A header-only, very fast and memory-friendly family of C++ hash map & btree containers.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "parallel-hashmap:x64-windows-static",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "ad79fee262d211cd377b1a3c1f66410446c80a7b512fc533e6bf8568211017c6",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "greg7mdp/parallel-hashmap",
+      "downloadLocation": "git+https://github.com/greg7mdp/parallel-hashmap@v1.3.8",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "499f132aa1513942762ae5214e9a37915529d60142439d32276d9e68a446c93ecea66caa32ac00bea683e2c932101cd999c8839a89211e91032f777f236181f7"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./C:/Users/codin/libraries/vcpkg/buildtrees/versioning_/versions/parallel-hashmap/65be62557bbdb29d6d0ee383b70a6f84ef401b2f/portfile.cmake",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e48ac32f9c8ef6c41bf5243040f858821891a6673fa8b76981ad6de8e56fbf34"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/codin/libraries/vcpkg/buildtrees/versioning_/versions/parallel-hashmap/65be62557bbdb29d6d0ee383b70a6f84ef401b2f/vcpkg.json",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d8899db4a14c3cf54b5847ee09baa8d5ca054f0dbb452863bb8a64c21c0b80cf"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}
