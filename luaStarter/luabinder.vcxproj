@@ -154,15 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\declarations.h" />
-    <ClInclude Include="src\lauxlib.h" />
-    <ClInclude Include="src\lua.h" />
-    <ClInclude Include="src\lua.hpp" />
     <ClInclude Include="src\luabinder.h" />
-    <ClInclude Include="src\luaconf.h" />
     <ClInclude Include="src\luaexception.h" />
     <ClInclude Include="src\luainterface.h" />
-    <ClInclude Include="src\luajit.h" />
-    <ClInclude Include="src\lualib.h" />
     <ClInclude Include="src\luaobject.h" />
     <ClInclude Include="src\luavaluecasts.h" />
     <ClInclude Include="src\pch.h" />
