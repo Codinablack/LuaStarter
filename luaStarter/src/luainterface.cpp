@@ -724,8 +724,10 @@ void LuaInterface::createLuaState()
 {
     // creates lua state
     L = luaL_newstate();
-    if (!L)
-        //g_logger.fatal("Unable to create lua state");
+    if (!L) {
+        // replacement for g_logger to handle failed lua state for now.
+        throw stdext::exception("Failed to create Lua state");
+    }
 
     // load lua standard libraries
     luaL_openlibs(L);
