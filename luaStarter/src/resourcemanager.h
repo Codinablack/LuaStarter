@@ -8,6 +8,7 @@ class ResourceManager {
 public:
 	void init();
 	void setConfigPath(const std::string& path) { configPath = path; };
+	void loadScriptDirectory(const std::string& path);
 	std::string getConfigPath() { return configPath; };
 	bool fileExists(const std::string& fileName);
 	std::string readFileContents(const std::string& fileName);

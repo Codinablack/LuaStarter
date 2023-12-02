@@ -33,6 +33,18 @@ void ResourceManager::init()
         setConfigPath(path);
 }
 
+void loadScriptDirectory(const std::string& directoryPath) {
+    try {
+        for (const auto& entry : std::filesystem::recursive_directory_iterator(directoryPath)) {
+            if (entry.is_regular_file() && entry.path().extension() == ".lua") {
+                g_lua.loadScript(entry.path().string());
+            }
+        }
+    }
+    catch (const std::exception& ex) {
+        std::cerr << "Error: " << ex.what() << std::endl;
+    }
+}
 
 std::string ResourceManager::guessFilePath(const std::string& filename, const std::string& type)
 {
