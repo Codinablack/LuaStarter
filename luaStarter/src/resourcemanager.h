@@ -6,6 +6,9 @@
 
 class ResourceManager {
 public:
+	void init();
+	void setConfigPath(const std::string& path) { configPath = path; };
+	std::string getConfigPath() { return configPath; };
 	bool fileExists(const std::string& fileName);
 	std::string readFileContents(const std::string& fileName);
 	std::string guessFilePath(const std::string& filename, const std::string& type);
@@ -16,6 +19,6 @@ public:
 	std::string getBaseDir();
 	bool discoverWorkDir(const std::string& existentFile);
 private:
-	std::string m_workDir;
+	std::string configPath;
 };
 extern ResourceManager g_resources;

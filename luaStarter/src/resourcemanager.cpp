@@ -4,6 +4,34 @@
 #include <fstream>
 #include "string.h"
 #include "luainterface.h"
+#include <Windows.h>
+
+void ResourceManager::init()
+{
+        std::string path = "./";
+#ifdef _WIN32
+        // Get the path of the currently running executable
+        char buffer[MAX_PATH];
+        GetModuleFileName(NULL, buffer, MAX_PATH);
+        // Get the directory of the executable
+        path = std::filesystem::path(buffer).parent_path().string();
+#elif __linux__
+        // Get the path of the currently running executable
+        char** argv = NULL;
+        int argc = 0;
+        char* exec_path = realpath(argv[0], NULL);
+        path = std::filesystem::path(exec_path).parent_path().string();
+        free(exec_path);
+#elif __APPLE__
+        // Get the path of the currently running executable
+        char buffer[PATH_MAX];
+        uint32_t bufsize = sizeof(buffer);
+        _NSGetExecutablePath(buffer, &bufsize);
+        // Get the directory of the executable
+        path = std::filesystem::path(buffer).parent_path().string();
+#endif
+        setConfigPath(path);
+}
 
 
 std::string ResourceManager::guessFilePath(const std::string& filename, const std::string& type)
@@ -121,7 +149,7 @@ bool ResourceManager::discoverWorkDir(const std::string& existentFile)
         if (PHYSFS_exists(existentFile.c_str())) {
             /// convert below function to exception
             ///g_logger.debug(stdext::format("Found work dir at '%s'", dir));
-            m_workDir = dir;
+            configPath = dir;
             found = true;
             break;
         }
