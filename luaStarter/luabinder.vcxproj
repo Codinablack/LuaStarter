@@ -146,6 +146,7 @@
     <ClCompile Include="src\luaexception.cpp" />
     <ClCompile Include="src\luainterface.cpp" />
     <ClCompile Include="src\luaobject.cpp" />
+    <ClCompile Include="src\luaregistry.cpp" />
     <ClCompile Include="src\luavaluecasts.cpp" />
     <ClCompile Include="src\resourcemanager.cpp" />
     <ClCompile Include="src\stdext\demangle.cpp" />

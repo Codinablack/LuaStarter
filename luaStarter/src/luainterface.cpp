@@ -309,11 +309,6 @@ void LuaInterface::loadScript(const std::string& fileName)
 {
     // resolve file full path
     std::string filePath{ fileName.data() };
-    if (!fileName.starts_with("/"))
-        filePath = getCurrentSourcePath() + "/" + filePath;
-
-    filePath = g_resources.guessFilePath(filePath, "lua");
-
     const auto& buffer = g_resources.readFileContents(filePath);
     const auto& source = "@" + filePath;
     loadBuffer(buffer, source);

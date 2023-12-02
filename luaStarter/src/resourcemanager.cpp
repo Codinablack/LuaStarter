@@ -1,6 +1,7 @@
 #include "resourcemanager.h"
 #include <filesystem>
 #include <physfs.h>
+#include <fstream>
 #include "string.h"
 #include "luainterface.h"
 
@@ -21,22 +22,14 @@ bool ResourceManager::isFileType(const std::string& filename, const std::string&
 
 std::string ResourceManager::readFileContents(const std::string& fileName)
 {
-    const std::string fullPath = resolvePath(fileName);
+    std::ifstream file(fileName);
+    if (!file.is_open()) {
+        throw std::runtime_error("Failed to open file: " + fileName);
+    }
 
-    PHYSFS_File* file = PHYSFS_openRead(fullPath.c_str());
-    if (!file)
-        throw Exception("unable to open file '%s': %s", fullPath, PHYSFS_getErrorByCode(PHYSFS_getLastErrorCode()));
-
-    const int fileSize = PHYSFS_fileLength(file);
-    std::string buffer(fileSize, 0);
-    PHYSFS_readBytes(file, &buffer[0], fileSize);
-    PHYSFS_close(file);
-
-#if ENABLE_ENCRYPTION == 1
-    buffer = decrypt(buffer);
-#endif
-
-    return buffer;
+    std::string contents((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+    file.close();
+    return contents;
 }
 
 std::string ResourceManager::resolvePath(const std::string& path)
@@ -105,4 +98,35 @@ std::list<std::string> ResourceManager::listDirectoryFiles(const std::string& di
     PHYSFS_freeList(rc);
     files.sort();
     return files;
+}
+
+std::string ResourceManager::getBaseDir()
+{
+    return PHYSFS_getBaseDir();
+}
+
+bool ResourceManager::discoverWorkDir(const std::string& existentFile)
+{
+    // search for modules directory
+    std::string possiblePaths[] = {
+                                    g_resources.getBaseDir(),
+                                    g_resources.getBaseDir() + "/game_data/",
+                                    g_resources.getBaseDir() + "../" };
+
+    bool found = false;
+    for (const auto& dir : possiblePaths) {
+        if (!PHYSFS_mount(dir.c_str(), nullptr, 0))
+            continue;
+
+        if (PHYSFS_exists(existentFile.c_str())) {
+            /// convert below function to exception
+            ///g_logger.debug(stdext::format("Found work dir at '%s'", dir));
+            m_workDir = dir;
+            found = true;
+            break;
+        }
+        PHYSFS_unmount(dir.c_str());
+    }
+
+    return found;
 }

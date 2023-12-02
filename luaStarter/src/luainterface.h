@@ -62,6 +62,7 @@ public:
     void terminate();
 
     // functions that will register all script stuff in lua global environment
+    void createRegistry() const;
     void registerSingletonClass(const std::string_view className);
     void registerClass(const std::string_view className, const std::string_view baseClass = "LuaObject");
 
